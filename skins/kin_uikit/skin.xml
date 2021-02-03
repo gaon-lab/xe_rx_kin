@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="0.2">
+    <title xml:lang="ko">XE 지식인 스킨 uikit</title>
+    <description xml:lang="ko">ui-kit 적용 스킨 </description>
+    <version>1.0</version>
+    <date>2021-02-03</date>
+    <author email_address="gaon-lab@naver.com" link="http://wkhblog.iwinv.net">
+        <name xml:lang="ko">XE Developer</name>
+    </author>
+    <license>GPL v2 or later</license>
+
+    <extra_vars>
+    </extra_vars>
+</skin>

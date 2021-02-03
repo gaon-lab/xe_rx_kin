@@ -1,0 +1,16 @@
+
+
+	{@ $category_index = 0;}
+	<ul  class="uk-tab">
+		<li loop="$categories => $key, $val" cond="$val->parent_srl == 0 && !$category_child_list" class="<!--@if($category_srl == $val->category_srl)--> uk-active<!--@end-->" id="gCate_idx_{$key}">
+			<a href="{getUrl('category_srl',$val->category_srl,'parent_srl','')}">{$val->title} <span>({number_format($val->document_count)})</span> </a> 
+			{@ $category_index++;}
+		</li>
+		<li loop="$category_child_list => $key, $val" cond="$val->parent_srl != 0 && $category_child_list" class="<!--@if($category_srl == $val->category_srl)--> uk-active<!--@end-->" id="gCate_idx_{$key}">
+			<a href="{getUrl('parent_srl',$val->parent_srl, 'category_srl', $val->category_srl)}">{$val->title} <span>({number_format($val->document_count)})</span></a> 
+			{@ $category_index++;}
+		</li>
+
+	</ul>
+
+
