@@ -1,0 +1,14 @@
+<filter name="insert_comment" module="kin" act="procKinInsertComment">
+    <form>
+        <node target="mid" required="true" />
+        <node target="parent_srl" required="true" />
+        <node target="content" required="true" />
+    </form>
+    <parameter />
+    <response callback_func="displayComments">
+        <tag name="error" />
+        <tag name="message" />
+        <tag name="parent_srl" />
+        <tag name="html" />
+    </response>
+</filter>
