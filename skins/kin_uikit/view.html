@@ -54,7 +54,9 @@
 			<span >목록</span>
 			</a>
 
-            <a href="{getUrl('act','dispKinReply')}" class="btn_answer" onmouseover="this.style.backgroundColor='#757c6d';" onmouseout="this.style.backgroundColor=''"><span>{$lang->cmd_reply}</span></a>
+            <a href="{getUrl('act','dispKinReply')}" class="btn_answer" onmouseover="this.style.backgroundColor='#757c6d';" onmouseout="this.style.backgroundColor=''" cond="$oDocument->getmembersrl() != $logged_info->member_srl"><span>{$lang->cmd_reply}</span></a>
+
+
 
 
 

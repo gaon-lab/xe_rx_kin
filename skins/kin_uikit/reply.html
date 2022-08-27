@@ -44,7 +44,7 @@
         </div><!-- //corner01 -->
 </div><!-- //section -->
 
-<form action="./" method="post" ruleset="insertReply" id="fo_kin_reply" class="writeForm">
+<form action="./" method="post" ruleset="insertReply" id="fo_kin_reply" class="writeForm" cond="$oDocument->getmembersrl() != $logged_info->member_srl">
 	<input type="hidden" name="act" value="procKinInsertReply" />
 	<input type="hidden" name="mid" value="{$mid}" />
 	<input type="hidden" name="document_srl" value="{$oDocument->document_srl}" />
@@ -69,6 +69,14 @@
 
     </div>
 </form>
+
+<div class="" cond="$oDocument->getmembersrl() == $logged_info->member_srl">
+
+<div class="message info">
+		<p>나 스스로의 질문에 답변을 달수 없습니다.</p>
+</div>
+
+</div>
 <script type="text/javascript">
 	jQuery(function($){
 		$('#a_select_target').change(function(){
